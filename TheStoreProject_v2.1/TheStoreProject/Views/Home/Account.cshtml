@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" />
+
+<h3 class="display-3">Create an account</h3>
+<p>In order to order a product or place a hold on it you need a customer account.</p>
+<h4 class="display-3">Login</h4>
+<form asp-action="Login" method="post">
+    <div asp-validation-summary="All"></div>
+    <br />
+
+</form>

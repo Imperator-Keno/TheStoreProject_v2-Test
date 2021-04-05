@@ -1,0 +1,46 @@
+﻿@model IEnumerable<TheStoreProject.Models.ItemMaster>
+<p><a asp-action="AddItem">Add a new item</a></p>
+@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    if (Model.Count() < 1)
+    {
+        <p>No items exist yet.</p>
+    }
+    else
+    {
+        <h3>All Items</h3>
+        <table border="1">
+            <tr>
+                <th>Item ID</th>
+                <th>Item UPC</th>
+                <th>Item Name</th>
+                <th>Item Description</th>
+                <th>Retail price</th>
+                <th>Discount percent</th>
+                <th>Inner QTY</th>
+                <th>Category Name</th>
+                <th>Category ID</th>
+                <th>Supplier ID</th>
+                <th>Supllier Name</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ITEM_ID</td>
+                    <td>@item.ITEM_UPC</td>
+                    <td>@item.ITEM_NAME</td>
+                    <td>@item.ITEM_DESCRIPTION</td>
+                    <td>@item.RETAIL_PRICE</td>
+                    <td>@item.DISCOUNT_PERCENTAGE</td>
+                    <td>@item.INNER_PACK_QTY</td>
+                    <td>@item.ITEM_CATEGORY</td>
+                    <td>@item.CATEGORY_ID</td>
+                    <td>@item.SUPPLIER</td>
+                    <td>@item.SUPPLIER_ID</td>
+                </tr>
+            }
+        </table>
+    }
+}

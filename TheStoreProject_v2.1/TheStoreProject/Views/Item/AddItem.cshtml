@@ -1,0 +1,37 @@
+﻿@model TheStoreProject.Models.ItemMaster
+<form asp-controller="Item" asp-action="AddItem" method="post">
+    <label asp-for="ITEM_ID"></label>
+    <input asp-for="ITEM_ID" />
+    <br />
+    <label asp-for="ITEM_UPC"></label>
+    <input asp-for="ITEM_UPC" />
+    <br />
+    <label asp-for="ITEM_DESCRIPTION"></label>
+    <input asp-for="ITEM_DESCRIPTION" />
+    <br />
+    <label asp-for="ITEM_NAME"></label>
+    <input asp-for="ITEM_NAME" />
+    <br />
+    <label asp-for="INNER_PACK_QTY"></label>
+    <input asp-for="INNER_PACK_QTY" />
+    <br />
+    <label asp-for="RETAIL_PRICE"></label>
+    <input asp-for="RETAIL_PRICE" />
+    <br />
+    <label asp-for="DISCOUNT_PERCENTAGE"></label>
+    <input asp-for="DISCOUNT_PERCENTAGE" />
+    <br />
+    <label asp-for="ITEM_CATEGORY"></label>
+    <input asp-for="ITEM_CATEGORY" />
+    <br />
+    <label asp-for="CATEGORY_ID"></label>
+    <input asp-for="CATEGORY_ID" />
+    <br />
+    <label asp-for="SUPPLIER"></label>
+    <input asp-for="SUPPLIER" />
+    <br />
+    <label asp-for="SUPPLIER_ID"></label>
+    <input asp-for="SUPPLIER_ID" />
+    <br />
+    <button type="submit">Add Item</button>
+</form>
